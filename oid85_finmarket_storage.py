@@ -48,6 +48,10 @@ def deploy():
     res = os.system(cmd)
     print(res)
 
+    cmd = f'sc config {config.finmarket_storage_service_name} start=auto'
+    print(cmd)
+    res = os.system(cmd)
+
     cmd = f'sc start {config.finmarket_storage_service_name}'
     print(cmd)
     res = os.system(cmd)
